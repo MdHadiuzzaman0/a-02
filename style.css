@@ -39,6 +39,12 @@ nav h1{
     -webkit-text-fill-color: transparent;
 }
 
+nav img{
+    display: none;
+    width: 35px;
+    height: 24px;
+}
+
 nav p{
     font-size: 1rem;
     font-weight: 600;
@@ -62,8 +68,9 @@ nav p{
     text-align: center;
 }
 
+
 .hero-container{
-    border: 1px solid #1A0B2E;
+    border: 0.1px solid #1A0B2E;
 }
 
 .hero-container h3{
@@ -85,6 +92,22 @@ padding: 19px 0 121px;
 .hero-container h1{
     font-size: 3.75rem;
     font-weight: 800;
+}
+
+.hero-container h1, .hero-container p{
+    animation: floatSide 3s ease-in-out infinite, glow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatSide {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(40px); }
+  50% { transform: translateX(0px); }
+  75% { transform: translateX(-40px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes glow {
+  0% {color: #00FF88;}
 }
 
 .hero-container p{
@@ -341,4 +364,164 @@ footer h1{
 footer p{
     font-size: 1rem;
     padding-bottom: 120px;
+}
+
+.hide{
+    display: none;
+}
+
+@media screen and (max-width: 576px){
+    nav{
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+        
+    nav img{
+        display: inline;
+        margin-top: 10px;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .hero{
+        height: 700px;
+    }
+
+    .hero-container h3{
+        margin-left: 350px;
+        font-size: 1.5rem;
+    }
+
+    .hero-container h1, .hero-container p{
+    animation: floatSide 3s ease-in-out infinite, glow 0.5s ease-in-out infinite alternate;}
+
+ @keyframes floatSide {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(5px); }
+  50% { transform: translateX(0px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0px); }
+}
+    
+    .btn2, .btn1{
+        font-size: 1.5rem;
+    }
+
+    .pdcst{
+        padding-bottom: 40px;
+    }
+
+    .pdcst-info1{
+        margin-bottom: 40px;
+    } 
+
+    .pdcst-info1 h1{
+        font-size: 2.5rem;
+    }
+    .pdcst-info1 p{
+        padding: 0 80px;
+    }  
+
+    hr{
+        margin: 0 30px 40px;
+    }
+
+    .pdcst-info2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+        align-items: center;
+    }
+
+    .str-box{
+        margin-left: 70px;
+    }
+
+    .why{
+        padding: 60px 0;
+    }
+
+    .why-container{
+        margin: 0 50px;
+    }
+
+    .why-container h1{
+        font-size: 2.3rem;
+        margin-bottom: 30px;
+    }
+
+    .why-grid{
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 20px;
+    }
+
+    .layout1{
+        padding: 120px 60px 0 30px;
+        height: 500px;
+        margin-left: 20px;
+    }
+
+    .layout2{
+        padding: 25px 40px;
+    }
+
+    .layout0{
+        margin-left: 30px
+    }
+
+    .feature h1{
+        font-size: 2.3rem;
+        margin-bottom: 30px;
+        padding: 20px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .feature-container{
+        flex-direction: column;
+    } 
+
+    .host h1{
+        font-size: 2.3rem;
+        margin-bottom: 30px;
+    }
+
+    .host-container{
+        padding: 0 20px;
+    }
+
+    .host-box{
+        flex-direction: column;
+    }
+
+    .host-info{
+        text-align: center;
+    }
+
+    .host-icon{
+        justify-content: center;
+    }
+
+    footer{
+        background-size: 250%;
+        max-width: 576px;
+    }
+
+    footer h1{
+        font-size: 4rem;
+    }
+
+    .footer-icon{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-left: 0px;
+    }
+
+    .icon2{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
 }
