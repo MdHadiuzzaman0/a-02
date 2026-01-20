@@ -9,6 +9,10 @@
   margin: 0 auto;
 }
 
+* p{
+    opacity: 60%;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -100,14 +104,15 @@ padding: 19px 0 121px;
 
 @keyframes floatSide {
   0% { transform: translateX(0px); }
-  25% { transform: translateX(40px); }
+  25% { transform: translateX(30px); }
   50% { transform: translateX(0px); }
-  75% { transform: translateX(-40px); }
+  75% { transform: translateX(-30px); }
   100% { transform: translateX(0px); }
 }
 
 @keyframes glow {
-  0% {color: #00FF88;}
+  0%, 25%, 50%, 75%, 100% {color: #00FF88;}
+  
 }
 
 .hero-container p{
@@ -294,6 +299,39 @@ hr{
     text-align: center;
 }
 
+.wave-text {
+  display: block;
+  text-align: center;
+}
+
+.wave-text span {
+  display: inline-block;
+  animation: jump 1.5s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.wave-text span:nth-child(1) { animation-delay: 0s; }
+.wave-text span:nth-child(2) { animation-delay: 0.1s; }
+.wave-text span:nth-child(3) { animation-delay: 0.2s; }
+.wave-text span:nth-child(4) { animation-delay: 0.3s; }
+.wave-text span:nth-child(5) { animation-delay: 0.4s; }
+.wave-text span:nth-child(6) { animation-delay: 0.5s; }
+.wave-text span:nth-child(7) { animation-delay: 0.6s; }
+.wave-text span:nth-child(8) { animation-delay: 0.7s; }
+.wave-text span:nth-child(9) { animation-delay: 0.8s; }
+.wave-text span:nth-child(10) { animation-delay: 0.9s; }
+.wave-text span:nth-child(11) { animation-delay: 0.10s; }
+
+
+
 .host-container{
     padding-top: 40px;
 }
@@ -350,7 +388,7 @@ footer h1{
     align-items: center;
     justify-content: center;
     gap: 50px;
-    margin-left: 40px;
+    margin-left: 55px;
     margin-top: 20px;
     margin-bottom: 32px;
 }
@@ -386,14 +424,23 @@ footer p{
     }
 
     .hero{
-        height: 700px;
+        background-image: url("./assets/hero-circle.png"), url("./assets/Image.png");
+        background-size: 45%, 140%;
+        background-position: center 20%, center;
+        
     }
 
     .hero-container h3{
-        margin-left: 350px;
-        font-size: 1.5rem;
+        margin-left: 310px;
+        font-size: 1.2rem;
     }
 
+    .hero-container img{
+        padding: 0 0 50px;
+        margin-bottom: 80px;
+        height: 200px;
+        width:100px;
+    }
     .hero-container h1, .hero-container p{
     animation: floatSide 3s ease-in-out infinite, glow 0.5s ease-in-out infinite alternate;}
 
@@ -407,6 +454,11 @@ footer p{
     
     .btn2, .btn1{
         font-size: 1.5rem;
+        margin: 0 100px;
+    }
+
+    .btn1{
+        margin-bottom: 15px;
     }
 
     .pdcst{
@@ -471,17 +523,22 @@ footer p{
         margin-left: 30px
     }
 
+    .feature{
+        padding: 20px 65px 100px;
+    }
+
     .feature h1{
         font-size: 2.3rem;
-        margin-bottom: 30px;
-        padding: 20px;
-        text-align: left;
-        width: 100%;
+        text-align: center;
     }
 
     .feature-container{
         flex-direction: column;
     } 
+
+    .feature-box p{
+        padding-top: 2px;
+    }
 
     .host h1{
         font-size: 2.3rem;
@@ -505,23 +562,29 @@ footer p{
     }
 
     footer{
-        background-size: 250%;
-        max-width: 576px;
+        background-image: url("./assets/footer\ mres.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        
     }
 
     footer h1{
-        font-size: 4rem;
+        font-size: 3rem;
+        padding-top: 35px;
+        padding-bottom: 25px;
     }
 
     .footer-icon{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin-left: 0px;
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr); */
+        gap: 15px;
+        flex-wrap: wrap;
+        margin: 0 90px 30px;
+        
     }
 
     .icon2{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 300;
     }
 }
