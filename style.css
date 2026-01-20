@@ -5,8 +5,7 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   color: aliceblue;
-  max-width: 1600px;
-  margin: 0 auto;
+/
 }
 
 * p{
@@ -55,6 +54,7 @@ nav p{
 }
 
 .btn{
+    color: white;
     margin-left: 282px;
     font-size: 1rem;
     font-weight: 700;
@@ -439,8 +439,8 @@ footer p{
         padding: 0 0 50px;
         margin-bottom: 80px;
         height: 200px;
-        width:100px;
     }
+
     .hero-container h1, .hero-container p{
     animation: floatSide 3s ease-in-out infinite, glow 0.5s ease-in-out infinite alternate;}
 
